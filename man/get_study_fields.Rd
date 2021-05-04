@@ -7,9 +7,12 @@
 get_study_fields(search_expr, fields, max_studies = 30)
 }
 \arguments{
-\item{search_expr}{A string following the querying guidelines on clinicaltrials.gov}
+\item{search_expr}{A string following the querying guidelines on clinicaltrials.gov.}
 
-\item{fields}{A character vector with any field names found on clinicaltrials.gov}
+\item{fields}{A character vector with any field names found on clinicaltrials.gov.}
+
+\item{max_studies}{A number indicating how many studies of all the ones that
+match the search expression will be returned.}
 }
 \description{
 This function takes a search expression and character vector with any number
@@ -18,4 +21,6 @@ of field names and returns one dataframe with the merged and parsed csv API resp
 \examples{
 get_study_fields(expr = 'heart attack',fields = basic_info_and_results_fields())
 }
-\keyword{A}
+\keyword{fields}
+\keyword{get}
+\keyword{many}
