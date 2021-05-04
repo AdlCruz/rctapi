@@ -1,6 +1,8 @@
 # rctapi
  pkg development for rctapi
 
+ This package allows an R user to interface with clinicaltrials.gov through their official API.
+ 
 The goal of the README.md is to answer the following questions about your package:
 
 Why should I use it?
