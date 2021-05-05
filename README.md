@@ -10,7 +10,7 @@
  
  And a complete list of fields can be found here:
  https://clinicaltrials.gov/api/gui/ref/study_structure
- Additionally, the package contains a nunber of pre-specified field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields)
+ Additionally, the package contains a nunber of pre-loaded field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields). The lists names (along with how many fields they include) can be viewed by use of _______
  
  Example of a query, this returns a data frame with rows for studies and a column for each requested field.
  
