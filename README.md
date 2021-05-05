@@ -18,6 +18,6 @@
  get_study_fields(expr = "psoriatic arthritis AND AREA[StudyType]Intervention", fields = core_info_fields)
  
 To install this package please use
-"devtools::"AdlCruz/rctapi"
+"devtools::install_github("AdlCruz/rctapi")"
 
 NOTE this package includes NO internal error handling.
