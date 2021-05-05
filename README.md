@@ -1,21 +1,22 @@
 # rctapi
  pkg development for rctapi
 
- This package allows an R user to interface with clinicaltrials.gov through their official API.
+ This package allows an R user to interface with clinicaltrials.gov through their official API (https://clinicaltrials.gov/api/gui/home). 
+ Specifically the user will be able to search and download information from studies by the use of a search expression and a list of fields.
  
-The goal of the README.md is to answer the following questions about your package:
+ Information regarding the search expression can be found here:
+ https://clinicaltrials.gov/api/gui/ref/syntax
+ https://clinicaltrials.gov/api/gui/ref/expr
+ 
+ And a complete list of fields can be found here:
+ https://clinicaltrials.gov/api/gui/ref/study_structure
+ Additionally, the package contains a nunber of pre-specified field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields)
+ 
+ Example of a query, this returns a data frame with rows for studies and a column for each requested field.
+ 
+ get_study_fields(expr = "psoriatic arthritis AND AREA[StudyType]Intervention", fields = core_info_fields)
+ 
+To install this package please use
+"devtools::"AdlCruz/rctapi"
 
-Why should I use it?
-How do I use it?
-How do I get it?
-On GitHub, the README.md will be rendered as HTML and displayed on the repository home page.
-
-I normally structure my README as follows:
-
-A paragraph that describes the high-level purpose of the package.
-
-An example that shows how to use the package to solve a simple problem.
-
-Installation instructions, giving code that can be copied and pasted into R.
-
-An overview that describes the main components of the package. For more complex packages, this will point to vignettes for more details.
+NOTE this package contains NO internal error handling fucntions or checks.
