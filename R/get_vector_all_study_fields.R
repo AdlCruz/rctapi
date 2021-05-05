@@ -6,9 +6,9 @@
 #' @keywords fields argument
 #' @export
 #' @examples
-#' study_fields_vector()
+#' get_vector_all_study_fields()
 
-study_fields_vector <- function() {
+get_vector_all_study_fields <- function() {
 
   # returns study fields character vector
   fields_list <- json_handler(glue::glue("{b_url}{b_info}study_fields_list?{fmt_json}"))

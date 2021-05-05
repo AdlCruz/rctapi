@@ -7,9 +7,12 @@
 get_study_fields(search_expr, fields, max_studies = 30)
 }
 \arguments{
-\item{search_expr}{A string following the querying guidelines on clinicaltrials.gov.}
+\item{search_expr}{A string following the querying guidelines at
+https://clinicaltrials.gov/api/gui/ref/syntax and https://clinicaltrials.gov/api/gui/ref/expr}
 
-\item{fields}{A character vector with any field names found on clinicaltrials.gov.}
+\item{fields}{A character vector with field names. All field names available at
+https://clinicaltrials.gov/api/info/study_fields_list?fmt=JSON, with "all_fields",
+or with "get_vector_all_study_fields()"}
 
 \item{max_studies}{A number indicating how many studies of all the ones that
 match the search expression will be returned.}

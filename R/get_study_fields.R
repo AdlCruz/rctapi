@@ -2,8 +2,11 @@
 #'
 #' This function takes a search expression and character vector with any number
 #' of field names and returns one dataframe with the merged and parsed csv API response.
-#' @param search_expr A string following the querying guidelines on clinicaltrials.gov.
-#' @param fields A character vector with any field names found on clinicaltrials.gov.
+#' @param search_expr A string following the querying guidelines at 
+#' https://clinicaltrials.gov/api/gui/ref/syntax and https://clinicaltrials.gov/api/gui/ref/expr
+#' @param fields A character vector with field names. All field names available at
+#' https://clinicaltrials.gov/api/info/study_fields_list?fmt=JSON, with "all_fields",
+#' or with "get_vector_all_study_fields()"
 #' @param max_studies A number indicating how many studies of all the ones that 
 #' match the search expression will be returned.
 #' @keywords get many fields

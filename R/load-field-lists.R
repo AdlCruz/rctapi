@@ -1,7 +1,7 @@
-# "all_fields_vector"
+# "all_fields"
 ################################################################################
 #function all fields
-all_fields_vector <- c("Acronym",
+all_fields <- c("Acronym",
                 "AgreementOtherDetails",
                 "AgreementPISponsorEmployee",
                 "AgreementRestrictionType",
@@ -324,5 +324,149 @@ all_fields_vector <- c("Acronym",
                 "VersionHolder",
                 "WhyStopped")
 
-#usethis:: use_data(all_fields_vector)
+#usethis::use_data(all_fields)
+################################################################################
+# FROM REGISTRATION DATA ELEMENTS
+# "core_info_fields"
+################################################################################
+# from the registration data elements
+core_info_fields <-c("NCTId","OverallStatus","CompletionDate","StudyType",
+                     "BriefTitle","BriefSummary","Keyword","EnrollmentCount",
+                     "EligibilityCriteria","LocationCountry","Condition","DesignAllocation",
+                     "DesignPrimaryPurpose","DesignInterventionModel","ArmGroupLabel",
+                     "ArmGroupType","InterventionType","InterventionName",
+                     "InterventionDescription","IsFDARegulatedDrug","Phase","PrimaryOutcomeMeasure")
+#usethis::use_data(core_info_fields)
+################################################################################
+# "extended_info_fields" # curated large list spanning all sections
+################################################################################
+extended_info_fields <- c( "NCTId","OrgStudyId","BriefTitle","Acronym","OfficialTitle",
+                          "StudyType","OverallStatus","WhyStopped","StartDate",
+                          "CompletionDate","ResponsiblePartyType","ResponsiblePartyInvestigatorFullName",
+                          "LeadSponsorName","IsFDARegulatedDrug","IsFDARegulatedDevice",
+                          "IsUnapprovedDevice","OversightHasDMC","BriefSummary",
+                          "DetailedDescription","Condition","Keyword","DesignPrimaryPurpose",
+                          "Phase","DesignInterventionModel","DesignInterventionModelDescription",
+                          "DesignWhoMasked","DesignMasking","DesignMaskingDescription",
+                          "DesignAllocation","EnrollmentCount","DesignObservationalModel",
+                          "DesignTimePerspective","BioSpecRetention","BioSpecDescription",
+                          "TargetDuration","ArmGroupLabel","ArmGroupType",
+                          "ArmGroupDescription","InterventionType","InterventionName",
+                          "InterventionDescription","PrimaryOutcomeMeasure","PrimaryOutcomeDescription",
+                          "PrimaryOutcomeTimeFrame","SecondaryOutcomeMeasure","SecondaryOutcomeDescription",
+                          "SecondaryOutcomeTimeFrame","OtherOutcomeMeasure","OtherOutcomeDescription",
+                          "OtherOutcomeTimeFrame","Gender","GenderBased","GenderDescription","MinimumAge",
+                          "MaximumAge","HealthyVolunteers","EligibilityCriteria",
+                          "StudyPopulation","SamplingMethod","CentralContactName",
+                          "CentralContactEMail","LocationCountry","LocationContactEMail",
+                          "IPDSharing","IPDSharingURL")
+
+#usethis::use_data(extended_info_fields)
+################################################################################
+# "identification_and_status" # from first 6 sections
+################################################################################
+identification_and_status_fields <- c("NCTId","OrgStudyId","BriefTitle","Acronym","OfficialTitle",
+                                     "StudyType","OverallStatus","WhyStopped","StartDate",
+                                     "CompletionDate","ResponsiblePartyType","ResponsiblePartyInvestigatorFullName",
+                                     "LeadSponsorName","IsFDARegulatedDrug","IsFDARegulatedDevice",
+                                     "IsUnapprovedDevice","OversightHasDMC","BriefSummary",
+                                     "DetailedDescription","Condition","Keyword")
+# usethis::use_data(identification_and_status_fields)
+################################################################################
+# "study_design_arms_groups_and_interventions" # from sections 7 and 8
+################################################################################
+study_design_arms_groups_and_interventions_fields <- c("DesignPrimaryPurpose",
+                                                        "Phase","DesignInterventionModel","DesignInterventionModelDescription",
+                                                        "DesignWhoMasked","DesignMasking","DesignMaskingDescription",
+                                                        "DesignAllocation","EnrollmentCount","DesignObservationalModel",
+                                                        "DesignTimePerspective","BioSpecRetention","BioSpecDescription",
+                                                        "TargetDuration","ArmGroupLabel","ArmGroupType",
+                                                        "ArmGroupDescription","InterventionType","InterventionName",
+                                                        "InterventionDescription")
+#usethis::use_data(study_design_arms_groups_and_interventions_fields)
+################################################################################
+# "outcome_measures_info_fields" # from section 9
+################################################################################
+outcome_measures_info_fields <- c("PrimaryOutcomeMeasure","PrimaryOutcomeDescription",
+                             "PrimaryOutcomeTimeFrame","SecondaryOutcomeMeasure",
+                             "SecondaryOutcomeDescription","SecondaryOutcomeTimeFrame",
+                             "OtherOutcomeMeasure","OtherOutcomeDescription","OtherOutcomeTimeFrame")
+#usethis::use_data(outcome_measures_info_fields)
+################################################################################
+# "eligibility_fields" # from section 10
+################################################################################
+eligibility_fields <- c("Gender","GenderBased","GenderDescription","MinimumAge",
+                        "MaximumAge","HealthyVolunteers","EligibilityCriteria",
+                        "StudyPopulation","SamplingMethod")
+#usethis::use_data(eligibility_fields)
+################################################################################
+#FROM RESULTS DATA ELEMENTS
+# "core_results_fields"
+################################################################################
+#core_results_fields <- c()
+#usethis::use_data(core_results_fields)
+################################################################################
+# "participant_flow_fields" # from section 1
+################################################################################
+participant_flow_fields <- c("FlowRecruitmentDetails","FlowPreAssignmentDetails",
+                             "FlowGroupTitle","FlowGroupDescription","FlowTypeUnitsAnalyzed",
+                             "FlowPeriodTitle","FlowMilestoneComment","FlowMilestoneType",
+                             "FlowAchievementNumSubjects","FlowAchievementNumUnits",
+                             "FlowDropWithdrawType","FlowReasonNumSubjects","FlowReasonNumUnits",
+                             "FlowReasonComment")
+#usethis::use_data(participant_flow_fields)
+################################################################################
+# "baseline_characteristics_fields" # from section 2
+################################################################################
+baseline_characteristics_fields <-c ("BaselineGroupTitle","BaselineGroupDescription",
+                                     "BaselineDenomCountValue",
+                                      "BaselineDenomUnits","BaselineTypeUnitsAnalyzed","BaselinePopulationDescription",
+                                      "BaselineMeasureTitle","BaselineMeasureDescription",
+                                      "BaselineMeasureParamType","BaselineMeasureDispersionType",
+                                      "BaselineMeasureDenomCountValue","BaselineMeasureDenomUnits",
+                                      "BaselineMeasureDenomUnitsSelected","BaselineMeasurePopulationDescription",
+                                      "BaselineCategoryTitle","BaselineClassTitle","BaselineMeasurementValue",
+                                      "BaselineMeasureUnitOfMeasure")
+#usethis::use_data(baseline_characteristics_fields)
+################################################################################
+#"outcome_measures_results_fields" from section 3
+################################################################################
+outcome_measures_results_fields <- c( "OutcomeMeasureType","OutcomeMeasureTitle","OutcomeMeasureDescription",
+                                      "OutcomeMeasureTimeFrame","OutcomeMeasureAnticipatedPostingDate",
+                                      "OutcomeGroupTitle","OutcomeGroupDescription","OutcomeDenomCountValue",
+                                      "OutcomeMeasureTypeUnitsAnalyzed","OutcomeDenomUnits","OutcomeMeasurePopulationDescription",
+                                      "OutcomeMeasureParamType","OutcomeMeasureDispersionType","OutcomeCategoryTitle",
+                                      "OutcomeClassTitle","OutcomeClassDenomCountValue","OutcomeClassDenomUnits",
+                                      "OutcomeMeasurementValue","OutcomeMeasureUnitOfMeasure",
+                                      "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription",
+                                      "OutcomeAnalysisNonInferiorityType","OutcomeAnalysisTestedNonInferiority",
+                                      "OutcomeAnalysisNonInferiorityComment","OutcomeAnalysisPValue",
+                                      "OutcomeAnalysisPValueComment","OutcomeAnalysisStatisticalMethod",
+                                      "OutcomeAnalysisStatisticalComment","OutcomeAnalysisParamType",
+                                      "OutcomeAnalysisParamValue","OutcomeAnalysisCIPctValue","OutcomeAnalysisCINumSides",
+                                      "OutcomeAnalysisCILowerLimit","OutcomeAnalysisCIUpperLimit",
+                                      "OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue",
+                                      "OutcomeAnalysisEstimateComment","OutcomeAnalysisOtherAnalysisDescription")
+#usethis::use_data(outcome_measures_results_fields)
+################################################################################
+# missing lists from sections: adverse event info, limitations and caveats, certain
+# agreements, results contact
+################################################################################
+
+
+
+################################################################################
+# FIELD LIST COMBINATIONS
+# "registration_fields" # large list of registration data elements
+################################################################################
+registration_fields <- append(identification_and_status_fields,
+                              append(study_design_arms_groups_and_interventions_fields,
+                              append(outcome_measures_info_fields, eligibility_fields)))
+# usethis::use_data(registration_fields)
+################################################################################
+# "results_fields" # large list of results data elements
+################################################################################
+results_fields <- append(participant_flow_fields,append(baseline_characteristics_fields,
+                                                        outcome_measures_results_fields))
+# usethis::use_data(results_fields)
 ################################################################################

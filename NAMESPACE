@@ -3,7 +3,7 @@
 export(csv_handler)
 export(get_fields)
 export(get_study_fields)
+export(get_vector_all_study_fields)
 export(json_handler)
 export(request_ct)
 export(split_vector_unique)
-export(study_fields_vector)
