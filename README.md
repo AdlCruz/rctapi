@@ -2,7 +2,7 @@
  pkg development for rctapi
 
  This package allows an R user to interface with clinicaltrials.gov through their official API (https://clinicaltrials.gov/api/gui/home). 
- Specifically the user will be able to search and download information from studies by the use of a search expression and a list of fields.
+ Specifically the user will be able to search and download information from studies by the use of a search expression and a list of study fields.
  
  Information regarding the search expression can be found here:
  https://clinicaltrials.gov/api/gui/ref/syntax
@@ -19,4 +19,4 @@
 To install this package please use
 "devtools::"AdlCruz/rctapi"
 
-NOTE this package contains NO internal error handling fucntions or checks.
+NOTE this package includes NO internal error handling.
