@@ -57,8 +57,9 @@
 
 #' Study Identification and Status Fields
 #'
-#' Character vector containing a small selection of fields aimed at allowing
-#' identification of studies and corresponding status
+#' Character vector containing a small selection of fields including study identification, study status,
+#' sponsor, regulatory oversight, relevant health condition and a brief summary and
+#' detailed description.
 #'
 #' @docType data
 #'

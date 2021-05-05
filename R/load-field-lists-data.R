@@ -375,7 +375,7 @@ identification_and_status_fields <- c("NCTId","OrgStudyId","BriefTitle","Acronym
 ################################################################################
 # "study_design_arms_groups_and_interventions" # from sections 7 and 8
 ################################################################################
-study_design_arms_groups_and_interventions_fields <- c("DesignPrimaryPurpose",
+study_design_arms_groups_and_interventions_fields <- c("NCTId","DesignPrimaryPurpose",
                                                         "Phase","DesignInterventionModel","DesignInterventionModelDescription",
                                                         "DesignWhoMasked","DesignMasking","DesignMaskingDescription",
                                                         "DesignAllocation","EnrollmentCount","DesignObservationalModel",
@@ -387,7 +387,7 @@ study_design_arms_groups_and_interventions_fields <- c("DesignPrimaryPurpose",
 ################################################################################
 # "outcome_measures_info_fields" # from section 9
 ################################################################################
-outcome_measures_info_fields <- c("PrimaryOutcomeMeasure","PrimaryOutcomeDescription",
+outcome_measures_info_fields <- c("NCTId","PrimaryOutcomeMeasure","PrimaryOutcomeDescription",
                              "PrimaryOutcomeTimeFrame","SecondaryOutcomeMeasure",
                              "SecondaryOutcomeDescription","SecondaryOutcomeTimeFrame",
                              "OtherOutcomeMeasure","OtherOutcomeDescription","OtherOutcomeTimeFrame")
@@ -395,7 +395,7 @@ outcome_measures_info_fields <- c("PrimaryOutcomeMeasure","PrimaryOutcomeDescrip
 ################################################################################
 # "eligibility_fields" # from section 10
 ################################################################################
-eligibility_fields <- c("Gender","GenderBased","GenderDescription","MinimumAge",
+eligibility_fields <- c("NCTId","Gender","GenderBased","GenderDescription","MinimumAge",
                         "MaximumAge","HealthyVolunteers","EligibilityCriteria",
                         "StudyPopulation","SamplingMethod")
 #usethis::use_data(eligibility_fields)
@@ -408,7 +408,7 @@ eligibility_fields <- c("Gender","GenderBased","GenderDescription","MinimumAge",
 ################################################################################
 # "participant_flow_fields" # from section 1
 ################################################################################
-participant_flow_fields <- c("FlowRecruitmentDetails","FlowPreAssignmentDetails",
+participant_flow_fields <- c("NCTId","FlowRecruitmentDetails","FlowPreAssignmentDetails",
                              "FlowGroupTitle","FlowGroupDescription","FlowTypeUnitsAnalyzed",
                              "FlowPeriodTitle","FlowMilestoneComment","FlowMilestoneType",
                              "FlowAchievementNumSubjects","FlowAchievementNumUnits",
@@ -418,7 +418,7 @@ participant_flow_fields <- c("FlowRecruitmentDetails","FlowPreAssignmentDetails"
 ################################################################################
 # "baseline_characteristics_fields" # from section 2
 ################################################################################
-baseline_characteristics_fields <-c ("BaselineGroupTitle","BaselineGroupDescription",
+baseline_characteristics_fields <-c ("NCTId","BaselineGroupTitle","BaselineGroupDescription",
                                      "BaselineDenomCountValue",
                                       "BaselineDenomUnits","BaselineTypeUnitsAnalyzed","BaselinePopulationDescription",
                                       "BaselineMeasureTitle","BaselineMeasureDescription",
@@ -431,7 +431,7 @@ baseline_characteristics_fields <-c ("BaselineGroupTitle","BaselineGroupDescript
 ################################################################################
 #"outcome_measures_results_fields" from section 3
 ################################################################################
-outcome_measures_results_fields <- c( "OutcomeMeasureType","OutcomeMeasureTitle","OutcomeMeasureDescription",
+outcome_measures_results_fields <- c( "NCTId","OutcomeMeasureType","OutcomeMeasureTitle","OutcomeMeasureDescription",
                                       "OutcomeMeasureTimeFrame","OutcomeMeasureAnticipatedPostingDate",
                                       "OutcomeGroupTitle","OutcomeGroupDescription","OutcomeDenomCountValue",
                                       "OutcomeMeasureTypeUnitsAnalyzed","OutcomeDenomUnits","OutcomeMeasurePopulationDescription",
