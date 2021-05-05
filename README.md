@@ -10,9 +10,10 @@
  
  And a complete list of fields can be found here:
  https://clinicaltrials.gov/api/gui/ref/study_structure
- Additionally, the package contains a nunber of pre-loaded field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields). The lists names (along with how many fields they include) can be viewed by use of _______
+ Additionally, the package contains a nunber of pre-loaded field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields). For study fields definitions use the ClinicalTrials.gov Data Element-to-API Field Crosswalks site :
+ https://clinicaltrials.gov/api/gui/ref/crosswalks
  
- Example of a query, this returns a data frame with rows for studies and a column for each requested field.
+ Example query, this returns a data frame with rows for studies and a column for each requested field.
  
  get_study_fields(expr = "psoriatic arthritis AND AREA[StudyType]Intervention", fields = core_info_fields)
  
