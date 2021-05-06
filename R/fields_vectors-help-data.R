@@ -224,3 +224,21 @@
 #' @examples
 #' results_fields
 "results_fields"
+
+#' Data fields input for netmeta
+#'
+#' Character vector containing .
+#'
+#' @docType data
+#'
+#' @usage data(for_netmea)
+#'
+#' @format A character vector with a selection of 16 fields
+#'
+#'
+#'
+#' @keywords fields
+#'
+#' @examples
+#' f
+"for_netmeta"

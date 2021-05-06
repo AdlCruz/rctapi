@@ -470,3 +470,10 @@ results_fields <- append(participant_flow_fields,append(baseline_characteristics
                                                         outcome_measures_results_fields))
 # usethis::use_data(results_fields)
 ################################################################################
+for_netmeta <- c("NCTId","OutcomeAnalysisParamType", "OutcomeAnalysisParamValue",
+                 "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType",
+                 "OutcomeAnalysisDispersionValue","ArmGroupLabel","ArmGroupType",
+                 "ArmGroupDescription","ArmGroupInterventionName","InterventionArmGroupLabel",
+                 "InterventionName","InterventionType","InterventionDescription",
+                 "InterventionMeshId","InterventionMeshTerm")
+#usethis::use_data(for_netmeta)
