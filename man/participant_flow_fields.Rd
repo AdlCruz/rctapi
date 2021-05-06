@@ -8,7 +8,7 @@
 A character vector with a selection of 14 fields
 }
 \source{
-\url https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_ParticipantFlow
+\url {https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_ParticipantFlow}
 }
 \usage{
 data(participant_flow_fields)

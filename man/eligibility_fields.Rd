@@ -8,7 +8,7 @@
 A character vector with a curated selection of 9 fields
 }
 \source{
-\url https://prsinfo.clinicaltrials.gov/definitions.html#Eligibility
+\url {https://prsinfo.clinicaltrials.gov/definitions.html#Eligibility}
 }
 \usage{
 data(eligibility_fields)

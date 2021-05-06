@@ -8,7 +8,7 @@
 A character vector with a selection of 18 fields
 }
 \source{
-\url https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Baseline
+\url {https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Baseline}
 }
 \usage{
 data(baseline_characteristics_fields)

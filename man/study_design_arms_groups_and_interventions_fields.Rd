@@ -8,7 +8,7 @@
 A character vector with a curated selection of 20 fields
 }
 \source{
-\url https://prsinfo.clinicaltrials.gov/definitions.html#StudyDesign
+\url {https://prsinfo.clinicaltrials.gov/definitions.html#StudyDesign}
 }
 \usage{
 data(study_design_arms_groups_and_interventions_fields)
