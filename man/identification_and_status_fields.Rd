@@ -8,7 +8,7 @@
 A character vector with a curated selection of 21 fields
 }
 \source{
-\url {https://prsinfo.clinicaltrials.gov/definitions.html#identification}
+\url{https://prsinfo.clinicaltrials.gov/definitions.html#identification
 }
 \usage{
 data(identification_and_status)

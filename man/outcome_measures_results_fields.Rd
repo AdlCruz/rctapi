@@ -8,7 +8,7 @@
 A character vector with a selection of 38 fields
 }
 \source{
-\url {https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Outcome_Measure}
+\url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Outcome_Measure
 }
 \usage{
 data(outcome_measures_results_fields)

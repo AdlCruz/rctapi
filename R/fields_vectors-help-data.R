@@ -28,8 +28,7 @@
 #'
 #' @format A character vector with a curated selection of 22 fields
 #'
-#' @source \url
-#'
+#' 
 #' @keywords fields
 #'
 #' @examples
@@ -47,7 +46,7 @@
 #'
 #' @format A character vector with a curated selection of 65 fields
 #'
-#' @source \url
+#'
 #'
 #' @keywords fields
 #'
@@ -67,7 +66,7 @@
 #'
 #' @format A character vector with a curated selection of 21 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/definitions.html#identification}
+#' @source \url{https://prsinfo.clinicaltrials.gov/definitions.html#identification
 #'
 #' @keywords fields
 #'
@@ -86,7 +85,7 @@
 #'
 #' @format A character vector with a curated selection of 20 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/definitions.html#StudyDesign}
+#' @source \url {https://prsinfo.clinicaltrials.gov/definitions.html#StudyDesign
 #'
 #' @keywords fields
 #'
@@ -105,7 +104,7 @@
 #'
 #' @format A character vector with a curated selection of 9 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/definitions.html#Outcomes}
+#' @source \url{https://prsinfo.clinicaltrials.gov/definitions.html#Outcomes
 #'
 #' @keywords fields
 #'
@@ -124,7 +123,7 @@
 #'
 #' @format A character vector with a curated selection of 9 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/definitions.html#Eligibility}
+#' @source \url{https://prsinfo.clinicaltrials.gov/definitions.html#Eligibility
 #'
 #' @keywords fields
 #'
@@ -143,7 +142,7 @@
 #'
 #' @format A character vector with a selection of 14 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_ParticipantFlow}
+#' @source \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_ParticipantFlow
 #'
 #' @keywords fields
 #'
@@ -162,7 +161,7 @@
 #'
 #' @format A character vector with a selection of 18 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Baseline}
+#' @source \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Baseline
 #'
 #' @keywords fields
 #'
@@ -181,7 +180,7 @@
 #'
 #' @format A character vector with a selection of 38 fields
 #'
-#' @source \url {https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Outcome_Measure}
+#' @source \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Outcome_Measure
 #'
 #' @keywords fields
 #'
@@ -200,7 +199,7 @@
 #'
 #' @format A character vector with a selection of 59 fields
 #'
-#' @source \url
+#'
 #'
 #' @keywords fields
 #'
@@ -218,7 +217,7 @@
 #'
 #' @format A character vector with a selection of 70 fields
 #'
-#' @source \url
+#'
 #'
 #' @keywords fields
 #'

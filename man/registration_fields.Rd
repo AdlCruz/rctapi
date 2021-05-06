@@ -7,9 +7,6 @@
 \format{
 A character vector with a selection of 59 fields
 }
-\source{
-\url
-}
 \usage{
 data(registration_fields)
 }

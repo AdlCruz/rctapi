@@ -7,9 +7,6 @@
 \format{
 A character vector with a curated selection of 22 fields
 }
-\source{
-\url
-}
 \usage{
 data(core_info_fields)
 }

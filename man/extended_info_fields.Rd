@@ -7,9 +7,6 @@
 \format{
 A character vector with a curated selection of 65 fields
 }
-\source{
-\url
-}
 \usage{
 data(extended_info_fields)
 }
