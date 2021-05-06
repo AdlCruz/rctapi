@@ -17,7 +17,7 @@
 get_study_fields <- function(search_expr, 
                              fields, # for all fields use study_fields_vector() 
                                      # or all_fields_vector
-                             max_studies = 30) {
+                             max_studies = 500) {
   fields_matrix <- split_vector_unique(fields,20)
 
   for (i in names(fields_matrix)) {

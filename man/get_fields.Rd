@@ -7,7 +7,7 @@
 get_fields(
   search_expr,
   fields,
-  max_studies = 30,
+  max_studies = 500,
   format = "csv",
   just_fields = TRUE
 )

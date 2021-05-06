@@ -11,7 +11,7 @@
 #' @examples
 #' get_fields(expr = 'heart attack', fields = basic_info_fields())
 
-get_fields <- function(search_expr, fields, max_studies = 30, format = "csv", just_fields = TRUE) {
+get_fields <- function(search_expr, fields, max_studies = 500, format = "csv", just_fields = TRUE) {
 
   # need error for wrong fields, all fields are in study_fields_vector()
   # no errors in params expr, fields, max_studies then

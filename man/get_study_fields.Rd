@@ -4,7 +4,7 @@
 \alias{get_study_fields}
 \title{Get Over 20 Study Fields}
 \usage{
-get_study_fields(search_expr, fields, max_studies = 30)
+get_study_fields(search_expr, fields, max_studies = 500)
 }
 \arguments{
 \item{search_expr}{A string following the querying guidelines at
