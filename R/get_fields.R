@@ -13,11 +13,18 @@
 
 get_fields <- function(search_expr, fields, max_studies = 500, format = "csv", just_fields = TRUE) {
 
-  # need error for wrong fields, all fields are in study_fields_vector()
   # no errors in params expr, fields, max_studies then
   # raise an error "Format argument has to be either 'json' or 'csv'"
 
-  concat_fields <- paste(fields,collapse = "%2C")
+  fields_nodup <- fields[!duplicated(fields)] #remove duplicated fields
+  `%nin%` = Negate(`%in%`)
+  for (i in fields_nodup) { #warn if any of fields is inexistent
+    if (i %nin% all_fields){
+      print("At least one of the specified fields does not exist.\n This could be due to spelling or capitalization")
+      break # error handling
+      }
+  }
+  concat_fields <- paste(fields_nodup,collapse = "%2C")
   req <- glue::glue("study_fields?expr={search_expr}&max_rnk={max_studies}&fields={concat_fields}")
 
   if (format =="csv") {
@@ -36,5 +43,9 @@ get_fields <- function(search_expr, fields, max_studies = 500, format = "csv", j
 
     else
       {return(json_handler(url))}
+  }
+  else {
+    print('Format argument must be `csv` or `json` ') #error handling
+    return('Format argument must be `csv` or `json` ')
   }
 }
