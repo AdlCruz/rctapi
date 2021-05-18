@@ -466,8 +466,8 @@ registration_fields <- append(identification_and_status_fields,
 ################################################################################
 # "results_fields" # large list of results data elements
 ################################################################################
-results_fields <- append(participant_flow_fields,append(baseline_characteristics_fields,
-                                                        outcome_measures_results_fields))
+results_fields <- append("NCTId",append(participant_flow_fields,append(baseline_characteristics_fields,
+                                                        outcome_measures_results_fields)))
 # usethis::use_data(results_fields)
 ################################################################################
 for_netmeta <- c("NCTId","OutcomeAnalysisParamType", "OutcomeAnalysisParamValue",
@@ -475,5 +475,5 @@ for_netmeta <- c("NCTId","OutcomeAnalysisParamType", "OutcomeAnalysisParamValue"
                  "OutcomeAnalysisDispersionValue","ArmGroupLabel","ArmGroupType",
                  "ArmGroupDescription","ArmGroupInterventionName","InterventionArmGroupLabel",
                  "InterventionName","InterventionType","InterventionDescription",
-                 "InterventionMeshId","InterventionMeshTerm")
+                 "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure")
 #usethis::use_data(for_netmeta)

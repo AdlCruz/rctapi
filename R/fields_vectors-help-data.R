@@ -215,7 +215,7 @@
 #'
 #' @usage data(registration_fields)
 #'
-#' @format A character vector with a selection of 70 fields
+#' @format A character vector with a selection of 71 fields
 #'
 #'
 #'
@@ -233,7 +233,7 @@
 #'
 #' @usage data(for_netmea)
 #'
-#' @format A character vector with a selection of 16 fields
+#' @format A character vector with a selection of 17 fields
 #'
 #'
 #'
