@@ -11,7 +11,9 @@ name <- c("all_fields",
           "baseline_characteristics_fields",
           "outcome_measures_results_fields",
           "registration_fields",
-          "results_fields")
+          "results_fields",
+          "for_netmeta",
+          "for_explorer")
 
 description <- c("All queriable field names",
                  "Smallest election of relevant fields providing complete overview of the study without including the results",
@@ -24,7 +26,8 @@ description <- c("All queriable field names",
                  "Information regarding the baseline measures and data collected in the study",
                  "Information regarding the outcomes measured and statistical analyses performed as well as the resulting values.",
                  "Large selection of registration data elements fields, these elements are all uploaded before the study is completed",
-                 "Large selection of results data elements fields.")
+                 "Large selection of results data elements fields.",
+                 "","")
 
 helpurl <- c("https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements",
              "https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements",
@@ -37,13 +40,15 @@ helpurl <- c("https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements"
              "https://clinicaltrials.gov/api/gui/ref/crosswalks#resultDataElements",
              "https://clinicaltrials.gov/api/gui/ref/crosswalks#resultDataElements",
              "https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements",
-             "https://clinicaltrials.gov/api/gui/ref/crosswalks#resultDataElements")
+             "https://clinicaltrials.gov/api/gui/ref/crosswalks#resultDataElements",
+             "",
+             "")
 
 n <- c(length(all_fields),length(core_info_fields),length(extended_info_fields),
        length(identification_and_status_fields),length(study_design_arms_groups_and_interventions_fields),
        length(outcome_measures_info_fields),length(eligibility_fields),length(participant_flow_fields),
        length(baseline_characteristics_fields),length(outcome_measures_results_fields),
-       length(registration_fields),length(results_fields))
+       length(registration_fields),length(results_fields),length(for_netmeta), length(for_explorer))
 
 field_lists_df <- data.frame(names = name , description = description, fields = n, help = helpurl, stringsAsFactors = FALSE)
 rownames(field_lists_df) <- field_lists_df$name

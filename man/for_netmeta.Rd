@@ -8,12 +8,12 @@
 A character vector with a selection of 17 fields
 }
 \usage{
-data(for_netmea)
+data(for_netmeta)
 }
 \description{
-Character vector containing .
+Character vector containing potentially helpful fields for the creation of a netmeta object.
 }
 \examples{
-f
+for_netmeta
 }
 \keyword{fields}

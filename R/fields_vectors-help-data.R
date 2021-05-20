@@ -28,7 +28,7 @@
 #'
 #' @format A character vector with a curated selection of 22 fields
 #'
-#' 
+#'
 #' @keywords fields
 #'
 #' @examples
@@ -186,7 +186,7 @@
 #'
 #' @examples
 #' outcome_measures_results_fields
-"outcome_measures_results_fields" 
+"outcome_measures_results_fields"
 
 #' Registration Data Elements Fields
 #'
@@ -227,11 +227,11 @@
 
 #' Data fields input for netmeta
 #'
-#' Character vector containing .
+#' Character vector containing potentially helpful fields for the creation of a netmeta object.
 #'
 #' @docType data
 #'
-#' @usage data(for_netmea)
+#' @usage data(for_netmeta)
 #'
 #' @format A character vector with a selection of 17 fields
 #'
@@ -240,5 +240,23 @@
 #' @keywords fields
 #'
 #' @examples
-#' f
+#' for_netmeta
 "for_netmeta"
+
+#' Data fields input for the data explorer shiny app held in "AdlCruz/rctexplorer"
+#'
+#' Character vector containing fields used in the data explorer app.
+#'
+#' @docType data
+#'
+#' @usage data(for_explorer)
+#'
+#' @format A character vector with a selection of 29 fields
+#'
+#'
+#'
+#' @keywords fields
+#'
+#' @examples
+#' for_explorer
+"for_explorer"

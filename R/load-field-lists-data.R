@@ -477,3 +477,11 @@ for_netmeta <- c("NCTId","OutcomeAnalysisParamType", "OutcomeAnalysisParamValue"
                  "InterventionName","InterventionType","InterventionDescription",
                  "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure")
 #usethis::use_data(for_netmeta)
+################################################################################
+for_explorer <-  c("NCTId","StudyType","OverallStatus","WhyStopped","StartDate",
+                 "CompletionDate","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
+                 "OversightHasDMC","Condition","Keyword","DesignPrimaryPurpose","Phase",
+                 "DesignInterventionModel","DesignMasking","DesignAllocation","EnrollmentCount",
+                 "ArmGroupLabel","ArmGroupType","InterventionType","InterventionName","InterventionMeshId",
+                 "InterventionMeshTerm","PrimaryOutcomeMeasure","Gender","MinimumAge","MaximumAge","HealthyVolunteers")
+#usethis::use_data(for_explorer)
