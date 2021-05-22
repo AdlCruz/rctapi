@@ -16,3 +16,4 @@ q_delay <- function(periods = c(1, 1.5)){
   cat(paste0(Sys.time()), "- Waiting for ", round(tictoc,2), "seconds\n")
   Sys.sleep(tictoc)
 }
+
