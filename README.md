@@ -15,10 +15,9 @@
  https://clinicaltrials.gov/api/gui/ref/crosswalks
  
  Example query, this returns a data frame with rows for studies and a column for each requested field.
- 
- get_study_fields(expr = "psoriatic arthritis AND AREA[StudyType]Intervention", fields = core_info_fields)
+ ```get_study_fields(expr = "psoriatic arthritis AND AREA[StudyType]Intervention", fields = core_info_fields)```
  
 To install this package please use:
-"devtools::install_github("AdlCruz/rctapi")"
+```devtools::install_github("AdlCruz/rctapi")```
 
 NOTE this package includes very little internal error handling.
