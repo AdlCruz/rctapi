@@ -21,4 +21,4 @@
 To install this package please use:
 "devtools::install_github("AdlCruz/rctapi")"
 
-NOTE this package includes NO internal error handling.
+NOTE this package includes very little internal error handling.
