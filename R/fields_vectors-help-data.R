@@ -233,7 +233,7 @@
 #'
 #' @usage data(for_netmeta)
 #'
-#' @format A character vector with a selection of 17 fields
+#' @format A character vector with a selection of 19 fields
 #'
 #'
 #'

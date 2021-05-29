@@ -5,7 +5,7 @@
 \alias{for_netmeta}
 \title{Data fields input for netmeta}
 \format{
-A character vector with a selection of 17 fields
+A character vector with a selection of 19 fields
 }
 \usage{
 data(for_netmeta)

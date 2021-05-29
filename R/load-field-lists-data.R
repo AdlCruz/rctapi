@@ -470,13 +470,12 @@ results_fields <- append("NCTId",append(participant_flow_fields,append(baseline_
                                                         outcome_measures_results_fields)))
 # usethis::use_data(results_fields)
 ################################################################################
-for_netmeta <- c("NCTId","OutcomeAnalysisParamType", "OutcomeAnalysisParamValue",
-                 "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType",
-                 "OutcomeAnalysisDispersionValue","ArmGroupLabel","ArmGroupType",
-                 "ArmGroupDescription","ArmGroupInterventionName","InterventionArmGroupLabel",
-                 "InterventionName","InterventionType","InterventionDescription",
-                 "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure")
-#usethis::use_data(for_netmeta)
+for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","ArmGroupInterventionName",
+    "InterventionArmGroupLabel","InterventionName","InterventionType","InterventionDescription",
+    "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure","SecondaryOutcomeMeasure",
+    "OtherOutcomeMeasure","OutcomeAnalysisParamType","OutcomeAnalysisParamValue",
+    "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue")
+#usethis::use_data(for_netmeta, overwrite = T)
 ################################################################################
 for_explorer <-  c("NCTId","StudyType","OverallStatus","WhyStopped","StartDate",
                  "CompletionDate","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
