@@ -471,16 +471,22 @@ results_fields <- append("NCTId",append(participant_flow_fields,append(baseline_
 # usethis::use_data(results_fields)
 ################################################################################
 for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","ArmGroupInterventionName",
-    "InterventionArmGroupLabel","InterventionName","InterventionType","InterventionDescription",
-    "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure","SecondaryOutcomeMeasure",
-    "OtherOutcomeMeasure","OutcomeAnalysisParamType","OutcomeAnalysisParamValue",
-    "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue")
-#usethis::use_data(for_netmeta, overwrite = T)
+                "InterventionArmGroupLabel","InterventionName","InterventionType","InterventionDescription",
+                "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure","SecondaryOutcomeMeasure",
+                "OtherOutcomeMeasure","OutcomeMeasureTitle","OutcomeGroupTitle","OutcomeGroupDescription",
+                "OutcomeMeasureParamType","OutcomeMeasureDispersionType","OutcomeCategoryTitle",
+                "OutcomeClassTitle","OutcomeClassDenomCountValue","OutcomeClassDenomUnits",
+                "OutcomeMeasurementValue","OutcomeMeasureUnitOfMeasure",
+                "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue",
+                "OutcomeAnalysisParamValue","OutcomeAnalysisParamType","OutcomeAnalysisDispersionValue",
+                "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription")
+usethis::use_data(for_netmeta, overwrite = T)
 ################################################################################
 for_explorer <-  c("NCTId","StudyType","OverallStatus","WhyStopped","StartDate",
                  "CompletionDate","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
                  "OversightHasDMC","Condition","Keyword","DesignPrimaryPurpose","Phase",
                  "DesignInterventionModel","DesignMasking","DesignAllocation","EnrollmentCount",
                  "ArmGroupLabel","ArmGroupType","InterventionType","InterventionName","InterventionMeshId",
-                 "InterventionMeshTerm","PrimaryOutcomeMeasure","Gender","MinimumAge","MaximumAge","HealthyVolunteers")
-#usethis::use_data(for_explorer)
+                 "InterventionMeshTerm","PrimaryOutcomeMeasure","Gender","MinimumAge","MaximumAge","HealthyVolunteers",
+                 "ResultsFirstPostDate")
+#usethis::use_data(for_explorer, overwrite = T)
