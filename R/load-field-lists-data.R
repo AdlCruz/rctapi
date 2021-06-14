@@ -480,7 +480,7 @@ for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","Ar
                 "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue",
                 "OutcomeAnalysisParamValue","OutcomeAnalysisParamType","OutcomeAnalysisDispersionValue",
                 "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription")
-usethis::use_data(for_netmeta, overwrite = T)
+#usethis::use_data(for_netmeta, overwrite = T)
 ################################################################################
 for_explorer <-  c("NCTId","StudyType","OverallStatus","WhyStopped","StartDate",
                  "CompletionDate","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
