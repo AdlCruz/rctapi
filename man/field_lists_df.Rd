@@ -6,7 +6,7 @@
 \title{Pre Loaded Field Lists, Description and Help}
 \format{
 A dataframe with the name of available field lists, a short description,
-their length and a help link.
+the fields in the list, the list length and a help link.
 }
 \usage{
 data(field_lists_df)

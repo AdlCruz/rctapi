@@ -19,12 +19,17 @@ get_fields(
 
 \item{max_studies}{A number indicating how many studies of all the ones that
 match the search expression will be returned}
+
+\item{format}{"csv" or "json" indicating the format of the returned file}
+
+\item{just_fields}{if format = "json"  the user can choose to save the unparsed query response}
 }
 \description{
 This function takes a search expression and character vector of 20 or less
 field names and returns one dataframe with the parsed API response. Uses glue
 }
 \examples{
-get_fields(expr = 'heart attack', fields = basic_info_fields())
+get_fields(expr = 'cardiomiopathy', fields = core_info_fields)
 }
-\keyword{A}
+\keyword{fields}
+\keyword{get}

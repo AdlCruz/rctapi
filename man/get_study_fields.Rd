@@ -4,7 +4,13 @@
 \alias{get_study_fields}
 \title{Get Over 20 Study Fields}
 \usage{
-get_study_fields(search_expr, fields, max_studies = 500)
+get_study_fields(
+  search_expr,
+  fields,
+  max_studies = 500,
+  format = "csv",
+  just_fields = TRUE
+)
 }
 \arguments{
 \item{search_expr}{A string following the querying guidelines at
@@ -16,13 +22,17 @@ or with "get_vector_all_study_fields()"}
 
 \item{max_studies}{A number indicating how many studies of all the ones that
 match the search expression will be returned.}
+
+\item{format}{"csv" or "json" indicating the format of the returned file.}
+
+\item{just_fields}{if format = "json"  the user can choose to save the unparsed query response.}
 }
 \description{
 This function takes a search expression and character vector with any number
 of field names and returns one dataframe with the merged and parsed csv API response.
 }
 \examples{
-get_study_fields(expr = 'heart attack',fields = basic_info_and_results_fields())
+get_study_fields(expr = 'heart attack',fields = core_info_fields)
 }
 \keyword{fields}
 \keyword{get}

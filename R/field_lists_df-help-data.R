@@ -8,8 +8,8 @@
 #'
 #' @usage data(field_lists_df)
 #'
-#' @format A dataframe with the name of available field lists, a short description, 
-#' their length and a help link.
+#' @format A dataframe with the name of available field lists, a short description,
+#' the fields in the list, the list length and a help link.
 #'
 #'
 #'

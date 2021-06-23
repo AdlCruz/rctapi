@@ -6,46 +6,47 @@
 #' @param fields A list or character vector with up to 20 field names
 #' @param max_studies A number indicating how many studies of all the ones that
 #' match the search expression will be returned
-#' @keywords A
+#' @param format "csv" or "json" indicating the format of the returned file
+#' @param just_fields if format = "json"  the user can choose to save the unparsed query response
+#' @keywords get fields
 #' @export
 #' @examples
-#' get_fields(expr = 'heart attack', fields = basic_info_fields())
+#' get_fields(expr = 'cardiomiopathy', fields = core_info_fields)
 
 get_fields <- function(search_expr, fields, max_studies = 500, format = "csv", just_fields = TRUE) {
 
-  # no errors in params expr, fields, max_studies then
-  # raise an error "Format argument has to be either 'json' or 'csv'"
-
-  fields_nodup <- fields[!duplicated(fields)] #remove duplicated fields
+  # no duplicated fields
+  fields_nodup <- fields[!duplicated(fields)]
   `%nin%` = Negate(`%in%`)
-  for (i in fields_nodup) { #warn if any of fields is inexistent
+  # no error fields - nonexistent or misspelled 
+  for (i in fields_nodup) { 
     if (i %nin% all_fields){
       print("At least one of the specified fields does not exist.\n This could be due to spelling or capitalization")
-      break # error handling
+      break
       }
   }
+  # url build for request part 1 - fields, search expression, and number of studies
   concat_fields <- paste(fields_nodup,collapse = "%2C")
   req <- glue::glue("study_fields?expr={search_expr}&max_rnk={max_studies}&fields={concat_fields}")
-
+  # url build for request part 2 - base values and format
   if (format =="csv") {
     url <- glue::glue("{b_url}{b_query}{req}&{fmt_csv}")
     records <- csv_handler(url)
     return(records)
   }
-
+  # return results in json format, and optional full query response
   else if (format=="json") {
     url <- glue::glue("{b_url}{b_query}{req}&{fmt_json}")
     if (just_fields == TRUE) {
       decoded_content <- json_handler(url)
       records <- decoded_content$StudyFields
       return(records)
-    }
-
+      }
     else
       {return(json_handler(url))}
   }
+  # no invalid formats
   else {
-    print('Format argument must be `csv` or `json` ') #error handling
-    return('Format argument must be `csv` or `json` ')
+    return('Format argument must be `csv` or `json`')
   }
 }

@@ -7,12 +7,11 @@
 request_ct(url)
 }
 \arguments{
-\item{url}{An (almost, unclear how strict this is) ASCII formatted string used
-to query the clinicaltrials.gov API}
+\item{url}{A formatted string used to query the clinicaltrials.gov API}
 }
 \description{
 This function requests the official clinicaltrials.gov API and returns an unparsed
-response. Uses httr.
+response.
 }
 \examples{
 request_ct(url)

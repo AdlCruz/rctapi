@@ -7,12 +7,10 @@
 csv_handler(url)
 }
 \arguments{
-\item{url}{An (almost, unclear how strict this is) ASCII formatted string used
-to query the clinicaltrials.gov API}
+\item{url}{A formatted string used to query the clinicaltrials.gov API}
 }
 \description{
-This function handles parsing of csv format API response.Returning a read csv.
-Uses httr, readr and stringi.
+This function handles parsing of csv format API response. Returns a csv dataframe.
 }
 \examples{
 csv_handler(url)

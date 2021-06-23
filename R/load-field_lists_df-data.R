@@ -27,7 +27,7 @@ description <- c("All queriable field names",
                  "Information regarding the outcomes measured and statistical analyses performed as well as the resulting values.",
                  "Large selection of registration data elements fields, these elements are all uploaded before the study is completed",
                  "Large selection of results data elements fields.",
-                 "","")
+                 "Focused on study results","Optimised for use with shiny app in rctexplorer")
 
 helpurl <- c("https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements",
              "https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements",
@@ -44,13 +44,22 @@ helpurl <- c("https://clinicaltrials.gov/api/gui/ref/crosswalks#regDataElements"
              "",
              "")
 
+fields <- as.matrix(list(all_fields,core_info_fields,extended_info_fields,
+            identification_and_status_fields,study_design_arms_groups_and_interventions_fields,
+            outcome_measures_info_fields,eligibility_fields,participant_flow_fields,
+            baseline_characteristics_fields,outcome_measures_results_fields,
+            registration_fields,results_fields,for_netmeta, for_explorer))
+
+
 n <- c(length(all_fields),length(core_info_fields),length(extended_info_fields),
        length(identification_and_status_fields),length(study_design_arms_groups_and_interventions_fields),
        length(outcome_measures_info_fields),length(eligibility_fields),length(participant_flow_fields),
        length(baseline_characteristics_fields),length(outcome_measures_results_fields),
        length(registration_fields),length(results_fields),length(for_netmeta), length(for_explorer))
 
-field_lists_df <- data.frame(names = name , description = description, fields = n, help = helpurl, stringsAsFactors = FALSE)
+field_lists_df <- data.frame(names = name , description = description, fields = fields, length = n, help = helpurl, stringsAsFactors = FALSE)
+
 rownames(field_lists_df) <- field_lists_df$name
 
-#usethis::use_data(field_lists_df)
+#usethis::use_data(field_lists_df, overwrite = T)
+
