@@ -4,7 +4,6 @@
 #' @param periods Numeric vector with two values corresponding to the lower and
 #' upper bound of a uniform distribution from which the delay time is randomly sampled.
 #' @keywords delay
-#' @export
 #' @examples
 #' for (i in 1:10) {
 #'   cat("Hello number", i, "\n")

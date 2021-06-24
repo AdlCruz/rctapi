@@ -335,8 +335,9 @@ core_info_fields <-c("NCTId","OverallStatus","CompletionDate","StudyType",
                      "EligibilityCriteria","LocationCountry","Condition","DesignAllocation",
                      "DesignPrimaryPurpose","DesignInterventionModel","ArmGroupLabel",
                      "ArmGroupType","InterventionType","InterventionName",
-                     "InterventionDescription","IsFDARegulatedDrug","Phase","PrimaryOutcomeMeasure")
-#usethis::use_data(core_info_fields)
+                     "InterventionDescription","IsFDARegulatedDrug","Phase","PrimaryOutcomeMeasure",
+                     "PrimaryOutcomeTimeFrame","ResultsFirstPostDate")
+usethis::use_data(core_info_fields, overwrite = TRUE)
 ################################################################################
 # "extended_info_fields" # curated large list spanning all sections
 ################################################################################
@@ -401,10 +402,7 @@ eligibility_fields <- c("NCTId","Gender","GenderBased","GenderDescription","Mini
 #usethis::use_data(eligibility_fields)
 ################################################################################
 #FROM RESULTS DATA ELEMENTS
-# "core_results_fields"
-################################################################################
-#core_results_fields <- c()
-#usethis::use_data(core_results_fields)
+
 ################################################################################
 # "participant_flow_fields" # from section 1
 ################################################################################
@@ -468,25 +466,27 @@ registration_fields <- append(identification_and_status_fields,
 ################################################################################
 results_fields <- append("NCTId",append(participant_flow_fields,append(baseline_characteristics_fields,
                                                         outcome_measures_results_fields)))
-# usethis::use_data(results_fields)
+ usethis::use_data(results_fields, overwrite = TRUE)
 ################################################################################
 for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","ArmGroupInterventionName",
                 "InterventionArmGroupLabel","InterventionName","InterventionType","InterventionDescription",
-                "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure","SecondaryOutcomeMeasure",
+                "InterventionMeshId","InterventionMeshTerm","PrimaryOutcomeMeasure","PrimaryOutcomeTimeFrame",
+                "SecondaryOutcomeMeasure","SecondaryOutcomeTimeFrame",
                 "OtherOutcomeMeasure","OutcomeMeasureTitle","OutcomeGroupTitle","OutcomeGroupDescription",
                 "OutcomeMeasureParamType","OutcomeMeasureDispersionType","OutcomeCategoryTitle",
                 "OutcomeClassTitle","OutcomeClassDenomCountValue","OutcomeClassDenomUnits",
                 "OutcomeMeasurementValue","OutcomeMeasureUnitOfMeasure",
                 "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue",
                 "OutcomeAnalysisParamValue","OutcomeAnalysisParamType","OutcomeAnalysisDispersionValue",
-                "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription")
-#usethis::use_data(for_netmeta, overwrite = T)
+                "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription","ResultsFirstPostDate")
+usethis::use_data(for_netmeta, overwrite = T)
 ################################################################################
 for_explorer <-  c("NCTId","StudyType","OverallStatus","WhyStopped","StartDate",
                  "CompletionDate","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
                  "OversightHasDMC","Condition","Keyword","DesignPrimaryPurpose","Phase",
                  "DesignInterventionModel","DesignMasking","DesignAllocation","EnrollmentCount",
-                 "ArmGroupLabel","ArmGroupType","InterventionType","InterventionName","InterventionMeshId",
-                 "InterventionMeshTerm","PrimaryOutcomeMeasure","Gender","MinimumAge","MaximumAge","HealthyVolunteers",
-                 "ResultsFirstPostDate")
-#usethis::use_data(for_explorer, overwrite = T)
+                 "ArmGroupLabel","ArmGroupType","ArmGroupInterventionName","InterventionType","InterventionName","InterventionMeshId",
+                 "InterventionMeshTerm","PrimaryOutcomeMeasure","PrimaryOutcomeTimeFrame",
+                 "SecondaryOutcomeMeasure","SecondaryOutcomeTimeFrame","Gender",
+                 "MinimumAge","MaximumAge","HealthyVolunteers","ResultsFirstPostDate")
+usethis::use_data(for_explorer, overwrite = T)

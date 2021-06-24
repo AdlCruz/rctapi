@@ -3,7 +3,6 @@
 #' This function handles parsing of csv format API response. Returns a csv dataframe.
 #' @param url A formatted string used to query the clinicaltrials.gov API
 #' @keywords csv format response
-#' @export
 #' @examples
 #' csv_handler(url)
 #'

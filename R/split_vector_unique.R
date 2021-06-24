@@ -8,7 +8,6 @@
 #' @param x A character vector
 #' @param n The number of strings in each column
 #' @keywords split vector unique
-#' @export
 #' @examples
 #' split_vector_unique(x= sample(c("April", "is", "the","cruellest","month","breeding",
 #' "lilacs"), size = 60, replace = TRUE), n =20)

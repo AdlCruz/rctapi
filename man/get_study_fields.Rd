@@ -8,8 +8,7 @@ get_study_fields(
   search_expr,
   fields,
   max_studies = 500,
-  format = "csv",
-  just_fields = TRUE
+  response_content = FALSE
 )
 }
 \arguments{
@@ -23,9 +22,9 @@ or with "get_vector_all_study_fields()"}
 \item{max_studies}{A number indicating how many studies of all the ones that
 match the search expression will be returned.}
 
-\item{format}{"csv" or "json" indicating the format of the returned file.}
-
-\item{just_fields}{if format = "json"  the user can choose to save the unparsed query response.}
+\item{response_content}{Logical indicating whether the returned object is the unparsed but decoded,
+content of the API query response. Will only return first 20 fields in fields argument.
+Suited for troubleshooting}
 }
 \description{
 This function takes a search expression and character vector with any number

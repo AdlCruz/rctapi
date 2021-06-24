@@ -4,13 +4,7 @@
 \alias{get_fields}
 \title{Get Up To 20 Study Fields}
 \usage{
-get_fields(
-  search_expr,
-  fields,
-  max_studies = 500,
-  format = "csv",
-  just_fields = TRUE
-)
+get_fields(search_expr, fields, max_studies = 500)
 }
 \arguments{
 \item{search_expr}{A string following the querying guidelines on clinicaltrials.gov}
@@ -19,10 +13,6 @@ get_fields(
 
 \item{max_studies}{A number indicating how many studies of all the ones that
 match the search expression will be returned}
-
-\item{format}{"csv" or "json" indicating the format of the returned file}
-
-\item{just_fields}{if format = "json"  the user can choose to save the unparsed query response}
 }
 \description{
 This function takes a search expression and character vector of 20 or less
