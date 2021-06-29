@@ -19,7 +19,9 @@ Imports:
   stringi,
   readr,
   jsonlite,
-  glue
+  glue,
+  usethis,
+  stats
 Depends: 
     R (>= 2.10)
 Suggests: 
