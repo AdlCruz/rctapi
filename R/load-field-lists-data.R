@@ -491,4 +491,4 @@ for_explorer <-  c("NCTId","Acronym","StudyType","OverallStatus","StartDate",
                  "SecondaryOutcomeMeasure","SecondaryOutcomeTimeFrame","Gender",
                  "MinimumAge","MaximumAge","HealthyVolunteers","ResultsFirstPostDate",
                  "OutcomeAnalysisParamValue","OutcomeAnalysisParamType")
-#usethis::use_data(for_explorer, overwrite = T)
+usethis::use_data(for_explorer, overwrite = T)
