@@ -337,7 +337,7 @@ core_info_fields <-c("NCTId","OverallStatus","CompletionDate","StudyType",
                      "ArmGroupType","InterventionType","InterventionName",
                      "InterventionDescription","IsFDARegulatedDrug","Phase","PrimaryOutcomeMeasure",
                      "PrimaryOutcomeTimeFrame","ResultsFirstPostDate")
-usethis::use_data(core_info_fields, overwrite = TRUE)
+#usethis::use_data(core_info_fields, overwrite = TRUE)
 ################################################################################
 # "extended_info_fields" # curated large list spanning all sections
 ################################################################################
@@ -466,7 +466,7 @@ registration_fields <- append(identification_and_status_fields,
 ################################################################################
 results_fields <- append("NCTId",append(participant_flow_fields,append(baseline_characteristics_fields,
                                                         outcome_measures_results_fields)))
- usethis::use_data(results_fields, overwrite = TRUE)
+ #usethis::use_data(results_fields, overwrite = TRUE)
 ################################################################################
 for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","ArmGroupInterventionName",
                 "InterventionArmGroupLabel","InterventionName","InterventionType","InterventionDescription",
@@ -478,15 +478,17 @@ for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","Ar
                 "OutcomeMeasurementValue","OutcomeMeasureUnitOfMeasure",
                 "OutcomeAnalysisEstimateComment","OutcomeAnalysisDispersionType","OutcomeAnalysisDispersionValue",
                 "OutcomeAnalysisParamValue","OutcomeAnalysisParamType","OutcomeAnalysisDispersionValue",
-                "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription","ResultsFirstPostDate")
-usethis::use_data(for_netmeta, overwrite = T)
+                "OutcomeAnalysisGroupId","OutcomeAnalysisGroupDescription","ResultsFirstPostDate",
+                "EnrollmentCount","IsFDARegulatedDrug","OverallStatus","Phase")
+#usethis::use_data(for_netmeta, overwrite = T)
 ################################################################################
-for_explorer <-  c("NCTId","StudyType","OverallStatus","WhyStopped","StartDate",
-                 "CompletionDate","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
-                 "OversightHasDMC","Condition","Keyword","DesignPrimaryPurpose","Phase",
+for_explorer <-  c("NCTId","Acronym","StudyType","OverallStatus","StartDate",
+                 "CompletionDate","LeadSponsorName","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
+                 "OversightHasDMC","Condition","Keyword","WhyStopped","DesignPrimaryPurpose","Phase",
                  "DesignInterventionModel","DesignMasking","DesignAllocation","EnrollmentCount",
                  "ArmGroupLabel","ArmGroupType","ArmGroupInterventionName","InterventionType","InterventionName","InterventionMeshId",
                  "InterventionMeshTerm","PrimaryOutcomeMeasure","PrimaryOutcomeTimeFrame",
                  "SecondaryOutcomeMeasure","SecondaryOutcomeTimeFrame","Gender",
-                 "MinimumAge","MaximumAge","HealthyVolunteers","ResultsFirstPostDate")
-usethis::use_data(for_explorer, overwrite = T)
+                 "MinimumAge","MaximumAge","HealthyVolunteers","ResultsFirstPostDate",
+                 "OutcomeAnalysisParamValue","OutcomeAnalysisParamType")
+#usethis::use_data(for_explorer, overwrite = T)

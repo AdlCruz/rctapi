@@ -29,7 +29,7 @@ get_study_fields <- function(search_expr,
     content <- get_response_content(search_expr = search_expr, fields = fields, max_studies = max_studies)
     return(content)
   }
-   else {
+  else {
   
     for (i in names(fields_matrix)) {
       # subset into search list
