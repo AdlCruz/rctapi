@@ -10,7 +10,7 @@
  
  And a complete list of fields can be found here:
  https://clinicaltrials.gov/api/gui/ref/study_structure
- Additionally, the package contains a number of pre-loaded field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields). List names and descriptions can be found in "field_lists_df". 
+ Additionally, the package contains a number of pre-loaded field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields). List names and descriptions can be found in teh embedded ```field_lists_df```. 
  For study fields definitions use the ClinicalTrials.gov Data Element-to-API Field Crosswalks site :
  https://clinicaltrials.gov/api/gui/ref/crosswalks
  
