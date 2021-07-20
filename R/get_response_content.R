@@ -29,8 +29,11 @@ get_response_content <- function (search_expr = search_expr, fields = fields, ma
     # url build for request part 1 - fields, search expression, and number of studies
     concat_fields <- paste(fields_nodup,collapse = "%2C")
     req <- glue::glue("study_fields?expr={search_expr}&max_rnk={max_studies}&fields={concat_fields}")
+    # url build for request part 2 - base values and format
     url <- glue::glue("{b_url}{b_query}{req}&{fmt_json}")
+    # request
     response <- request_ct(url)
+    #decoded json return
     dec_content <- jsonlite::fromJSON(httr::content(response, "text"), simplifyVector = TRUE)
     
     return(dec_content)

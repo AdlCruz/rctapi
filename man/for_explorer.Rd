@@ -5,7 +5,7 @@
 \alias{for_explorer}
 \title{Data fields input for the data explorer shiny app held in "AdlCruz/rctexplorer"}
 \format{
-A character vector with a selection of 29 fields
+A character vector
 }
 \usage{
 data(for_explorer)

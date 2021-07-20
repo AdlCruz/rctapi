@@ -5,7 +5,7 @@
 \alias{outcome_measures_info_fields}
 \title{Outcome Measures Description Fields}
 \format{
-A character vector with a curated selection of 9 fields
+A character vector
 }
 \source{
 \url{https://prsinfo.clinicaltrials.gov/definitions.html#Outcomes

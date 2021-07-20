@@ -7,7 +7,7 @@
 csv_handler(url)
 }
 \arguments{
-\item{url}{A formatted string used to query the clinicaltrials.gov API}
+\item{url}{A formatted string passed on to the API request}
 }
 \description{
 This function handles parsing of csv format API response. Returns a csv dataframe.

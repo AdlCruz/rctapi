@@ -5,7 +5,7 @@
 \alias{identification_and_status_fields}
 \title{Study Identification and Status Fields}
 \format{
-A character vector with a curated selection of 21 fields
+A character vector
 }
 \source{
 \url{https://prsinfo.clinicaltrials.gov/definitions.html#identification

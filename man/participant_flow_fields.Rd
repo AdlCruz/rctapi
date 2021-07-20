@@ -5,7 +5,7 @@
 \alias{participant_flow_fields}
 \title{Participant Flow Fields}
 \format{
-A character vector with a selection of 14 fields
+A character vector
 }
 \source{
 \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_ParticipantFlow

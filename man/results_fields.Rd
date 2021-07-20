@@ -5,7 +5,7 @@
 \alias{results_fields}
 \title{Results Data Elements Fields}
 \format{
-A character vector with a selection of 71 fields
+A character vector
 }
 \usage{
 data(registration_fields)

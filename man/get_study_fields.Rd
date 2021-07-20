@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_study_fields.R
 \name{get_study_fields}
 \alias{get_study_fields}
-\title{Get Over 20 Study Fields}
+\title{Get Study Fields}
 \usage{
 get_study_fields(
   search_expr,
@@ -24,14 +24,14 @@ match the search expression will be returned.}
 
 \item{response_content}{Logical indicating whether the returned object is the unparsed but decoded,
 content of the API query response. Will only return first 20 fields in fields argument.
-Suited for troubleshooting}
+Suited for troubleshooting.}
 }
 \description{
 This function takes a search expression and character vector with any number
 of field names and returns one dataframe with the merged and parsed csv API response.
 }
 \examples{
-get_study_fields(expr = 'heart attack',fields = core_info_fields)
+get_study_fields(expr = 'heart attack',fields = all_fields)
 }
 \keyword{fields}
 \keyword{get}

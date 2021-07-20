@@ -1,11 +1,12 @@
 #' Get Up To 20 Study Fields
 #'
 #' This function takes a search expression and character vector of 20 or less
-#' field names and returns one dataframe with the parsed API response. Uses glue
+#' field names and returns one dataframe with the parsed API response.
+#' 
 #' @param search_expr A string following the querying guidelines on clinicaltrials.gov
-#' @param fields A list or character vector with up to 20 field names
+#' @param fields A list or character vector with up to 20 field names.
 #' @param max_studies A number indicating how many studies of all the ones that
-#' match the search expression will be returned
+#' match the search expression will be returned.
 #' @keywords get fields
 #' @export
 #' @examples

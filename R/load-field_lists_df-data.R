@@ -57,7 +57,9 @@ n <- c(length(all_fields),length(core_info_fields),length(extended_info_fields),
        length(baseline_characteristics_fields),length(outcome_measures_results_fields),
        length(registration_fields),length(results_fields),length(for_netmeta), length(for_explorer))
 
-field_lists_df <- data.frame(names = name , description = description, fields = fields, length = n, help = helpurl, stringsAsFactors = FALSE)
+field_lists_df <- data.frame(names = name , description = description, 
+                             fields = fields, length = n, help = helpurl, 
+                             stringsAsFactors = FALSE)
 
 rownames(field_lists_df) <- field_lists_df$name
 

@@ -7,7 +7,7 @@
 #'
 #' @usage data(all_fields)
 #'
-#' @format A character vector with the names of all queriable fields
+#' @format A character vector with the names of all 322 queriable fields
 #'
 #' @source \url{https://clinicaltrials.gov/api/info/study_fields_list?fmt=JSON}
 #'
@@ -26,7 +26,7 @@
 #'
 #' @usage data(core_info_fields)
 #'
-#' @format A character vector with a curated selection of 22 fields
+#' @format A character vector
 #'
 #'
 #' @keywords fields
@@ -44,7 +44,7 @@
 #'
 #' @usage data(extended_info_fields)
 #'
-#' @format A character vector with a curated selection of 65 fields
+#' @format A character vector
 #'
 #'
 #'
@@ -64,7 +64,7 @@
 #'
 #' @usage data(identification_and_status)
 #'
-#' @format A character vector with a curated selection of 21 fields
+#' @format A character vector
 #'
 #' @source \url{https://prsinfo.clinicaltrials.gov/definitions.html#identification
 #'
@@ -83,7 +83,7 @@
 #'
 #' @usage data(study_design_arms_groups_and_interventions_fields)
 #'
-#' @format A character vector with a curated selection of 20 fields
+#' @format A character vector
 #'
 #' @source \url {https://prsinfo.clinicaltrials.gov/definitions.html#StudyDesign
 #'
@@ -102,7 +102,7 @@
 #'
 #' @usage data(outcome_measures_info_fields)
 #'
-#' @format A character vector with a curated selection of 9 fields
+#' @format A character vector
 #'
 #' @source \url{https://prsinfo.clinicaltrials.gov/definitions.html#Outcomes
 #'
@@ -121,7 +121,7 @@
 #'
 #' @usage data(eligibility_fields)
 #'
-#' @format A character vector with a curated selection of 9 fields
+#' @format A character vector
 #'
 #' @source \url{https://prsinfo.clinicaltrials.gov/definitions.html#Eligibility
 #'
@@ -140,7 +140,7 @@
 #'
 #' @usage data(participant_flow_fields)
 #'
-#' @format A character vector with a selection of 14 fields
+#' @format A character vector
 #'
 #' @source \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_ParticipantFlow
 #'
@@ -159,7 +159,7 @@
 #'
 #' @usage data(baseline_characteristics_fields)
 #'
-#' @format A character vector with a selection of 18 fields
+#' @format A character vector
 #'
 #' @source \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Baseline
 #'
@@ -178,7 +178,7 @@
 #'
 #' @usage data(outcome_measures_results_fields)
 #'
-#' @format A character vector with a selection of 38 fields
+#' @format A character vector
 #'
 #' @source \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Outcome_Measure
 #'
@@ -197,7 +197,7 @@
 #'
 #' @usage data(registration_fields)
 #'
-#' @format A character vector with a selection of 59 fields
+#' @format A character vector
 #'
 #'
 #'
@@ -215,7 +215,7 @@
 #'
 #' @usage data(registration_fields)
 #'
-#' @format A character vector with a selection of 71 fields
+#' @format A character vector
 #'
 #'
 #'
@@ -233,7 +233,7 @@
 #'
 #' @usage data(for_netmeta)
 #'
-#' @format A character vector with a selection of 19 fields
+#' @format A character vector
 #'
 #'
 #'
@@ -251,7 +251,7 @@
 #'
 #' @usage data(for_explorer)
 #'
-#' @format A character vector with a selection of 29 fields
+#' @format A character vector
 #'
 #'
 #'

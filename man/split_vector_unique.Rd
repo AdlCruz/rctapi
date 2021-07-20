@@ -9,17 +9,17 @@ split_vector_unique(x, n)
 \arguments{
 \item{x}{A character vector}
 
-\item{n}{The number of strings in each column}
+\item{n}{The number of elements (strings) in each column}
 }
 \description{
 This function splits a character vector of any length into a matrix with n rows
-of x elements. This is to get around the 20 field limit imposed by the API. Currently
-duplicated strings are placed in new columns. FUnction could be simplified.
-Created by user ngm Feb 2018 Stackoverflow
+of x elements. This is to get around the 20 field limit imposed by the API.
+When necessary removes duplicates and fills columns with NA values.
+Adapted from https://stackoverflow.com/a/48930537
 }
 \examples{
 split_vector_unique(x= sample(c("April", "is", "the","cruellest","month","breeding",
-"lilacs"), size = 60, replace = TRUE), n =20)
+"lilacs"), size = 40, replace = TRUE), n =5)
 
 }
 \keyword{split}

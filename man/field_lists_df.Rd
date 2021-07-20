@@ -5,15 +5,14 @@
 \alias{field_lists_df}
 \title{Pre Loaded Field Lists, Description and Help}
 \format{
-A dataframe with the name of available field lists, a short description,
-the fields in the list, the list length and a help link.
+Dataframe
 }
 \usage{
 data(field_lists_df)
 }
 \description{
 A dataframe with the name of available field lists, a short description,
-their length and a help link.
+their length, the fields included, and a help link.
 }
 \examples{
 field_lists_df

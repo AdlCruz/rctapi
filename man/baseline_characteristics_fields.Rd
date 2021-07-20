@@ -5,7 +5,7 @@
 \alias{baseline_characteristics_fields}
 \title{Baseline Measures and Characteristics Fields}
 \format{
-A character vector with a selection of 18 fields
+A character vector
 }
 \source{
 \url{https://prsinfo.clinicaltrials.gov/results_definitions.html#Result_Baseline

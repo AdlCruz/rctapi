@@ -5,7 +5,7 @@
 \alias{study_design_arms_groups_and_interventions_fields}
 \title{Study Design, Arms, Groups and Interventions Fields}
 \format{
-A character vector with a curated selection of 20 fields
+A character vector
 }
 \source{
 \url {https://prsinfo.clinicaltrials.gov/definitions.html#StudyDesign

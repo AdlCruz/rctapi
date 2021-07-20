@@ -5,7 +5,7 @@
 \alias{all_fields}
 \title{All Field Names in a clinicaltrials.gov Record}
 \format{
-A character vector with the names of all queriable fields
+A character vector with the names of all 322 queriable fields
 }
 \source{
 \url{https://clinicaltrials.gov/api/info/study_fields_list?fmt=JSON}

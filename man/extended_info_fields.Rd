@@ -5,7 +5,7 @@
 \alias{extended_info_fields}
 \title{Extended Study Information Fields}
 \format{
-A character vector with a curated selection of 65 fields
+A character vector
 }
 \usage{
 data(extended_info_fields)

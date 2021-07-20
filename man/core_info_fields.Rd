@@ -5,7 +5,7 @@
 \alias{core_info_fields}
 \title{Core Study Information Fields}
 \format{
-A character vector with a curated selection of 22 fields
+A character vector
 }
 \usage{
 data(core_info_fields)

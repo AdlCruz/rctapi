@@ -5,7 +5,7 @@
 \alias{eligibility_fields}
 \title{Eligibility and Population Fields}
 \format{
-A character vector with a curated selection of 9 fields
+A character vector
 }
 \source{
 \url{https://prsinfo.clinicaltrials.gov/definitions.html#Eligibility

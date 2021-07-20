@@ -9,14 +9,14 @@ get_fields(search_expr, fields, max_studies = 500)
 \arguments{
 \item{search_expr}{A string following the querying guidelines on clinicaltrials.gov}
 
-\item{fields}{A list or character vector with up to 20 field names}
+\item{fields}{A list or character vector with up to 20 field names.}
 
 \item{max_studies}{A number indicating how many studies of all the ones that
-match the search expression will be returned}
+match the search expression will be returned.}
 }
 \description{
 This function takes a search expression and character vector of 20 or less
-field names and returns one dataframe with the parsed API response. Uses glue
+field names and returns one dataframe with the parsed API response.
 }
 \examples{
 get_fields(expr = 'cardiomiopathy', fields = core_info_fields)

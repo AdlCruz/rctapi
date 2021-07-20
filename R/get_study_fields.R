@@ -1,7 +1,8 @@
-#' Get Over 20 Study Fields
+#' Get Study Fields
 #'
 #' This function takes a search expression and character vector with any number
 #' of field names and returns one dataframe with the merged and parsed csv API response.
+#' 
 #' @param search_expr A string following the querying guidelines at
 #' https://clinicaltrials.gov/api/gui/ref/syntax and https://clinicaltrials.gov/api/gui/ref/expr
 #' @param fields A character vector with field names. All field names available at
@@ -11,11 +12,11 @@
 #' match the search expression will be returned.
 #' @param response_content Logical indicating whether the returned object is the unparsed but decoded,
 #' content of the API query response. Will only return first 20 fields in fields argument. 
-#' Suited for troubleshooting
+#' Suited for troubleshooting.
 #' @keywords get many fields
 #' @export
 #' @examples
-#' get_study_fields(expr = 'heart attack',fields = core_info_fields)
+#' get_study_fields(expr = 'heart attack',fields = all_fields)
 
 get_study_fields <- function(search_expr,
                              fields,
