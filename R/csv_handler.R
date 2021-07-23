@@ -15,7 +15,8 @@ csv_handler <- function(url) {
   # parse response into records
   split_hdrs <- stringi::stri_split(con,regex = "\\n\\s*\\n")
   split_lines  <- stringi::stri_split_regex(split_hdrs[[1]],"\\n")
-  records  <- readr::read_csv(split_lines[[2]])
+  records  <- read.table(text = split_lines[[2]], sep = ",", header = TRUE)
+  
   
   return(records)
 }
