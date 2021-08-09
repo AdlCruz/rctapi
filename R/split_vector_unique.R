@@ -13,16 +13,16 @@
 #' "lilacs"), size = 40, replace = TRUE), n =5)
 #'
 split_vector_unique <- function(x, n) {
-  # How many eventual columns?
+  # number of columns in matrix
   n_cols <- trunc(length(x)/n) + 1
-  # That many eventual columns all filled with NA for now.
+  # fill matrix with NA
   vec_list <- lapply(1:(n_cols), function(x) rep(NA, n))
 
   # For each word...
   for(string in x) {
     for(i in 1:n_cols) {
+      # ...add it to a non-full column not containing that word.
       if(!(string %in% vec_list[[i]]) && sum(is.na(vec_list[[i]])) > 0) {
-        # ...add it to a non-full column not containing that word.
         vec_list[[i]][min(which(is.na(vec_list[[i]])))] <- string
         break
       }
