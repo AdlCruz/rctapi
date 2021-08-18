@@ -482,7 +482,7 @@ for_netmeta <-c("NCTId","ArmGroupLabel","ArmGroupType","ArmGroupDescription","Ar
                 "EnrollmentCount","IsFDARegulatedDrug","OverallStatus","Phase")
 #usethis::use_data(for_netmeta, overwrite = T)
 ################################################################################
-for_explorer <-  c("NCTId","Official Title","BriefTitle","Acronym","StudyType","OverallStatus","StartDate",
+for_explorer <-  c("NCTId","OfficialTitle","BriefTitle","Acronym","StudyType","OverallStatus","StartDate",
                  "CompletionDate","LeadSponsorName","IsFDARegulatedDrug","IsFDARegulatedDevice","IsUnapprovedDevice",
                  "OversightHasDMC","Condition","Keyword","WhyStopped","DesignPrimaryPurpose","Phase",
                  "DesignInterventionModel","DesignMasking","DesignAllocation","EnrollmentCount",
