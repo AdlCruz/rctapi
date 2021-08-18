@@ -1,23 +1,35 @@
-# rctapi
- Working version. Pkg in development. Install with ```devtools::install_github("AdlCruz/rctapi")```
+Working. In development. Install with ```devtools::install_github("AdlCruz/rctapi")```
+# rctapi: Search and Download ClinicalTrials.gov
+Using this tool is as easy as 1, 2, 3 … 4 … 1a.
+## 1. Build a search expression
+Both
+`"embolism" `
+  and
+`"heart attack AND NOT stroke AND AREA[StudyType ](Interventional OR Observational) AND TILT[OfficialTitle]stress"`
+ are valid search expressions, just follow the [rules](https://clinicaltrials.gov/api/gui/ref/syntax).
+## 2. Choose which fields you want
+ View `all_fields` and create your own list. E.g`c("NCTId","Acronym")`.
+ 
+ Or view `field_lists_df` for pre-made lists.`for_explorer` is good to start with.
+##  3. Choose how many studies you want
+Reliably retrieve up to 1000 studies. Choose a number that suits you.
+## 4. Download study data
+`stress_heart <- get_study_fields(search_expr = "heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational)AND TILT[OfficialTitle]stress", 
+fields = for_explorer, max_studies = 500)`
 
- This package allows an R user to interface with clinicaltrials.gov through their official API (https://clinicaltrials.gov/api/gui/home). 
- Specifically the user will be able to search and download information from studies by the use of a search expression and a list of study fields.
- 
- Information regarding the search expression can be found here:
- https://clinicaltrials.gov/api/gui/ref/syntax
- https://clinicaltrials.gov/api/gui/ref/expr
- 
- A complete list of fields can be found here:
- https://clinicaltrials.gov/api/gui/ref/study_structure
- Additionally, the package contains a number of pre-loaded field lists. (e.g core_info_fields, extended_info_fields, eligibility_fields, results_fields). List names and descriptions can be found in the embedded ```field_lists_df```. 
- For study fields definitions use the ClinicalTrials.gov Data Element-to-API Field Crosswalks site :
- https://clinicaltrials.gov/api/gui/ref/crosswalks
- 
- Example query, this returns a data frame with rows for studies and a column for each requested field.
- ```get_study_fields(expr = "psoriatic arthritis AND AREA[StudyType]Intervention", fields = core_info_fields)```
- 
-To install this package please use:
-```devtools::install_github("AdlCruz/rctapi")```
+`stress_data` is a dataframe with n rows of studies and n columns of fields.
+## 1a. Return an unparsed response to check your search_expression
+Toggling the argument `response_content = TRUE` will return the entire API response.
 
-NOTE this package includes very little internal error handling.
+Among the contents is the number of studies that were found to match your search expression.
+
+Access it with `stress_heart$StudyFieldsResponse$NStudiesFound`
+
+NOTE: will not work unless a pre-made list is filling `fields`
+
+## Useful links
+[Field definitions](https://clinicaltrials.gov/api/gui/ref/crosswalks)
+
+NOTE: This package includes very little internal error handling.
+
+Developed in fulfillment of HDS MSc Summer Project
