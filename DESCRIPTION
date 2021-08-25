@@ -1,15 +1,14 @@
 Package: rctapi
-Title: Facilitates Querying clinicaltrials.gov API
+Title: rctapi: Download Clinical Trial data from ClinicalTrials.gov
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Arturo",
-           family = "De La Cruz",
+           family = "De La Cruz Libardi",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "arturodlcl@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: Facilitates downloading ClinicalTrials.gov data through official API
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
