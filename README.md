@@ -1,4 +1,4 @@
-Working. In development. Install with ```devtools::install_github("AdlCruz/rctapi")```
+Working status unknown. Install with ```devtools::install_github("AdlCruz/rctapi")```
 # rctapi: Search and Download ClinicalTrials.gov
 Using this tool is as easy as 1, 2, 3 … 4 … 1a.
 ## 1. Build a search expression
@@ -12,7 +12,7 @@ Both
  
  Or view `field_lists_df` for pre-made lists.`for_explorer` is good to start with.
 ##  3. Choose how many studies you want
-Reliably retrieve up to 1000 studies. Choose a number that suits you.
+Reliably retrieve up to 1000 studies.
 ## 4. Download study data
 `stress_heart <- get_study_fields(search_expr = "heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational)AND TILT[OfficialTitle]stress", 
 fields = for_explorer, max_studies = 500)`
