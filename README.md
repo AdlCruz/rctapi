@@ -14,6 +14,7 @@ Both
 ##  3. Choose how many studies you want
 Reliably retrieve up to 1000 studies with the `max_studies` argument.
 ## 4. Download study data
+Put everything together
 `stress_heart <- get_study_fields(search_expr = "heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational)AND TILT[OfficialTitle]stress", 
 fields = for_explorer, max_studies = 500)`
 
