@@ -5,7 +5,7 @@ Using this tool is as easy as 1, 2, 3 … 4 … 1a.
 Both
 `"embolism" `
   and
-`"heart attack AND NOT stroke AND AREA[StudyType ](Interventional OR Observational) AND TILT[OfficialTitle]stress"`
+`"heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational) AND TILT[OfficialTitle]stress"`
  are valid search expressions, just follow the [rules](https://clinicaltrials.gov/api/gui/ref/syntax).
 ## 2. Choose which fields you want
  View `all_fields` and create your own list. E.g`c("NCTId","Acronym")`.
