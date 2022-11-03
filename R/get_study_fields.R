@@ -16,7 +16,7 @@
 #' @keywords get many fields
 #' @export
 #' @examples
-#' get_study_fields(expr = 'heart attack',fields = all_fields)
+#' get_study_fields(search_expr = 'heart attack',fields = all_fields)
 
 get_study_fields <- function(search_expr,
                              fields,
