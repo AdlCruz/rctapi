@@ -1,4 +1,4 @@
-Working status X. Install with ```devtools::install_github("AdlCruz/rctapi")```
+Working status ✓. Install with ```devtools::install_github("AdlCruz/rctapi")```
 # rctapi: Search and Download ClinicalTrials.gov
 Using this tool is as easy as 1, 2, 3 … 4 … 1a.
 ## 1. Build a search expression
