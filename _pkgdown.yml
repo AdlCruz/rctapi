@@ -1,0 +1,5 @@
+url: https://adlcruz.github.io/rctapi/
+template:
+  bootstrap: 5
+  bootswatch: cyborg
+
