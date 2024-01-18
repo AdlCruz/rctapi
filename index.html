@@ -5,14 +5,16 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="Facilitates downloading ClinicalTrials.gov data through official API">
-<title>rctapi: Download Clinical Trial data from ClinicalTrials.gov • rctapi</title>
+<meta name="description" content="Do you wish you could search and download the massive clinical trials database that is ClinicalTrials.gov? If so, you might make use of this R package to create complex queries and return targeted data fields as a table.
+">
+<title>Search, filter and download ClinicalTrials.gov data from R • rctapi</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="rctapi: Download Clinical Trial data from ClinicalTrials.gov">
-<meta property="og:description" content="Facilitates downloading ClinicalTrials.gov data through official API">
+<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Search, filter and download ClinicalTrials.gov data from R">
+<meta property="og:description" content="Do you wish you could search and download the massive clinical trials database that is ClinicalTrials.gov? If so, you might make use of this R package to create complex queries and return targeted data fields as a table.
+">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -50,46 +52,46 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><div class="section level1">
-<div class="page-header"><h1 id="rctapi-search-and-download-clinicaltrialsgov">rctapi: Search and Download ClinicalTrials.gov<a class="anchor" aria-label="anchor" href="#rctapi-search-and-download-clinicaltrialsgov"></a>
-</h1></div>
+  <main id="main" class="col-md-9"><div class="section level3">
+<h3 id="rctapi-query-and-download-from-clinicaltrialsgov">rctapi: Query and download from ClinicalTrials.gov<a class="anchor" aria-label="anchor" href="#rctapi-query-and-download-from-clinicaltrialsgov"></a>
+</h3>
 <p>Working status ✓ (18-01-2024).</p>
 <p>Install with <code>devtools::install_github("AdlCruz/rctapi")</code></p>
 <p>Using this tool is as easy as 1, 2, 3 … 4 … 1a.</p>
-<div class="section level2">
-<h2 id="id_1-build-a-search-expression">1. Build a search expression<a class="anchor" aria-label="anchor" href="#id_1-build-a-search-expression"></a>
-</h2>
+<div class="section level5">
+<h5 id="id_1-build-a-search-expression">1. Build a search expression<a class="anchor" aria-label="anchor" href="#id_1-build-a-search-expression"></a>
+</h5>
 <p>Both <code>"embolism"</code> and <code>"heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational) AND TILT[OfficialTitle]stress"</code></p>
 <p>are valid search expressions, just follow the <a href="https://clinicaltrials.gov/api/gui/ref/syntax" class="external-link">rules</a>.</p>
 </div>
-<div class="section level2">
-<h2 id="id_2-choose-which-fields-you-want">2. Choose which fields you want<a class="anchor" aria-label="anchor" href="#id_2-choose-which-fields-you-want"></a>
-</h2>
+<div class="section level5">
+<h5 id="id_2-choose-which-fields-you-want">2. Choose which fields you want<a class="anchor" aria-label="anchor" href="#id_2-choose-which-fields-you-want"></a>
+</h5>
 <p>View <code>all_fields</code> and create your own list. E.g<code>c("NCTId","Acronym")</code>, or view <code>field_lists_df</code> for pre-made lists.<code>for_explorer</code> is good to start with.</p>
 </div>
-<div class="section level2">
-<h2 id="id_3-choose-how-many-studies-you-want-to-return">3. Choose how many studies you want to return<a class="anchor" aria-label="anchor" href="#id_3-choose-how-many-studies-you-want-to-return"></a>
-</h2>
+<div class="section level5">
+<h5 id="id_3-choose-how-many-studies-you-want-to-return">3. Choose how many studies you want to return<a class="anchor" aria-label="anchor" href="#id_3-choose-how-many-studies-you-want-to-return"></a>
+</h5>
 <p>Reliably retrieve up to 1000 studies with the <code>max_studies</code> argument.</p>
 </div>
-<div class="section level2">
-<h2 id="id_4-download-study-data">4. Download study data<a class="anchor" aria-label="anchor" href="#id_4-download-study-data"></a>
-</h2>
+<div class="section level5">
+<h5 id="id_4-download-study-data">4. Download study data<a class="anchor" aria-label="anchor" href="#id_4-download-study-data"></a>
+</h5>
 <p>Putting it all together</p>
 <p><code>stress_heart &lt;- get_study_fields(search_expr = "heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational)AND TILT[OfficialTitle]stress",  fields = for_explorer, max_studies = 500)</code></p>
 <p><code>stress_heart</code> is a dataframe with rows of studies and columns of fields.</p>
 </div>
-<div class="section level2">
-<h2 id="id_1a-return-an-unparsed-response-to-check-your-search_expression">1a. Return an unparsed response to check your search_expression<a class="anchor" aria-label="anchor" href="#id_1a-return-an-unparsed-response-to-check-your-search_expression"></a>
-</h2>
+<div class="section level5">
+<h5 id="id_1a-return-an-unparsed-response-to-check-your-search_expression">1a. Return an unparsed response to check your search_expression<a class="anchor" aria-label="anchor" href="#id_1a-return-an-unparsed-response-to-check-your-search_expression"></a>
+</h5>
 <p>Toggling the argument <code>response_content = TRUE</code> will return the entire API response.</p>
 <p>Among the contents is the number of studies that were found to match your search expression.</p>
 <p>Access it with <code>stress_heart$StudyFieldsResponse$NStudiesFound</code></p>
 <p>NOTE: 1a will not work unless a pre-made list is filling <code>fields</code></p>
 </div>
-<div class="section level2">
-<h2 id="useful-links">Useful links<a class="anchor" aria-label="anchor" href="#useful-links"></a>
-</h2>
+<div class="section level5">
+<h5 id="useful-links">Useful links<a class="anchor" aria-label="anchor" href="#useful-links"></a>
+</h5>
 <p><a href="https://clinicaltrials.gov/api/gui/ref/crosswalks" class="external-link">Field definitions</a></p>
 <p>NOTE: This package includes very little internal error handling.</p>
 </div>
@@ -113,7 +115,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Arturo De La Cruz Libardi <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/YOUR-ORCID-ID" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Arturo De La Cruz Libardi <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0009-0001-1543-7999" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 </ul>
 </div>
 
