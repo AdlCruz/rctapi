@@ -50,20 +50,50 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9"><p>Working status ✓ (03-08-2023). Install with <code>devtools::install_github("AdlCruz/rctapi")</code> # rctapi: Search and Download ClinicalTrials.gov Using this tool is as easy as 1, 2, 3 … 4 … 1a. ## 1. Build a search expression Both <code>"embolism"</code> and <code>"heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational) AND TILT[OfficialTitle]stress"</code> are valid search expressions, just follow the <a href="https://clinicaltrials.gov/api/gui/ref/syntax" class="external-link">rules</a>. ## 2. Choose which fields you want View <code>all_fields</code> and create your own list. E.g<code>c("NCTId","Acronym")</code>. Or view <code>field_lists_df</code> for pre-made lists.<code>for_explorer</code> is good to start with. ## 3. Choose how many studies you want to return Reliably retrieve up to 1000 studies with the <code>max_studies</code> argument. ## 4. Download study data Put everything together</p>
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="rctapi-search-and-download-clinicaltrialsgov">rctapi: Search and Download ClinicalTrials.gov<a class="anchor" aria-label="anchor" href="#rctapi-search-and-download-clinicaltrialsgov"></a>
+</h1></div>
+<p>Working status ✓ (18-01-2024).</p>
+<p>Install with <code>devtools::install_github("AdlCruz/rctapi")</code></p>
+<p>Using this tool is as easy as 1, 2, 3 … 4 … 1a.</p>
+<div class="section level2">
+<h2 id="id_1-build-a-search-expression">1. Build a search expression<a class="anchor" aria-label="anchor" href="#id_1-build-a-search-expression"></a>
+</h2>
+<p>Both <code>"embolism"</code> and <code>"heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational) AND TILT[OfficialTitle]stress"</code></p>
+<p>are valid search expressions, just follow the <a href="https://clinicaltrials.gov/api/gui/ref/syntax" class="external-link">rules</a>.</p>
+</div>
+<div class="section level2">
+<h2 id="id_2-choose-which-fields-you-want">2. Choose which fields you want<a class="anchor" aria-label="anchor" href="#id_2-choose-which-fields-you-want"></a>
+</h2>
+<p>View <code>all_fields</code> and create your own list. E.g<code>c("NCTId","Acronym")</code>, or view <code>field_lists_df</code> for pre-made lists.<code>for_explorer</code> is good to start with.</p>
+</div>
+<div class="section level2">
+<h2 id="id_3-choose-how-many-studies-you-want-to-return">3. Choose how many studies you want to return<a class="anchor" aria-label="anchor" href="#id_3-choose-how-many-studies-you-want-to-return"></a>
+</h2>
+<p>Reliably retrieve up to 1000 studies with the <code>max_studies</code> argument.</p>
+</div>
+<div class="section level2">
+<h2 id="id_4-download-study-data">4. Download study data<a class="anchor" aria-label="anchor" href="#id_4-download-study-data"></a>
+</h2>
+<p>Putting it all together</p>
 <p><code>stress_heart &lt;- get_study_fields(search_expr = "heart attack AND NOT stroke AND AREA[StudyType](Interventional OR Observational)AND TILT[OfficialTitle]stress",  fields = for_explorer, max_studies = 500)</code></p>
-<p><code>stress_heart</code> is a dataframe with rows of studies and columns of fields. ## 1a. Return an unparsed response to check your search_expression Toggling the argument <code>response_content = TRUE</code> will return the entire API response.</p>
+<p><code>stress_heart</code> is a dataframe with rows of studies and columns of fields.</p>
+</div>
+<div class="section level2">
+<h2 id="id_1a-return-an-unparsed-response-to-check-your-search_expression">1a. Return an unparsed response to check your search_expression<a class="anchor" aria-label="anchor" href="#id_1a-return-an-unparsed-response-to-check-your-search_expression"></a>
+</h2>
+<p>Toggling the argument <code>response_content = TRUE</code> will return the entire API response.</p>
 <p>Among the contents is the number of studies that were found to match your search expression.</p>
 <p>Access it with <code>stress_heart$StudyFieldsResponse$NStudiesFound</code></p>
-<p>NOTE: will not work unless a pre-made list is filling <code>fields</code></p>
+<p>NOTE: 1a will not work unless a pre-made list is filling <code>fields</code></p>
+</div>
 <div class="section level2">
 <h2 id="useful-links">Useful links<a class="anchor" aria-label="anchor" href="#useful-links"></a>
 </h2>
 <p><a href="https://clinicaltrials.gov/api/gui/ref/crosswalks" class="external-link">Field definitions</a></p>
 <p>NOTE: This package includes very little internal error handling.</p>
-<p>Developed in fulfillment of HDS MSc Summer Project</p>
 </div>
-
+</div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
