@@ -2,4 +2,13 @@ url: https://adlcruz.github.io/rctapi/
 template:
   bootstrap: 5
   bootswatch: cyborg
-
+home:
+  title: Search, filter and download ClinicalTrials.gov data from R
+  description: >
+    Do you wish you could search and download the massive clinical trials
+    database that is ClinicalTrials.gov? If so, you might make use of this R
+    package to create complex queries and return targeted data fields as a
+    table.
+  strip_header: false
+  sidebar:
+    structure: [links, license, community, citation, authors, dev]

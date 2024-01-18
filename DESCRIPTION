@@ -6,8 +6,8 @@ Authors@R:
            family = "De La Cruz Libardi",
            role = c("aut", "cre"),
            email = "arturodlcl@gmail.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Facilitates downloading ClinicalTrials.gov data through official API
+           comment = c(ORCID = "0009-0001-1543-7999"))
+Description: Facilitates downloading ClinicalTrials.gov data through the official API
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
