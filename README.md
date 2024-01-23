@@ -1,4 +1,3 @@
-
 ### rctapi: Query and download from ClinicalTrials.gov
 
 Working status ✓ (18-01-2024).
